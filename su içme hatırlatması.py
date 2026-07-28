@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.set_page_config(page_title="Filiz ile Su Takibi", page_icon="🌱", layout="centered")
+
+st.markdown(
+    """
+    <style>
+    footer {visibility: hidden;}
+    .block-container {padding-top: 1.5rem; padding-bottom: 1rem;}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+filiz_html = """<!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -693,3 +708,6 @@
 
 </body>
 </html>
+"""
+
+components.html(filiz_html, height=900, scrolling=True)
